@@ -17,11 +17,14 @@ namespace LinkedListProblem
             program.AddLast(30);
             program.AddLast(70);
 
-            // Delete the first element (index=0) from the linked list
-
-            program.Delete(0);
-
+            // Dispaying the above created Linked list
             program.DiplayData();
+
+
+            //Searching the element 30 in the above created linked list
+            var isitpresent = program.Search(30);
+            Console.WriteLine("\n");
+            Console.WriteLine("Element 30 is Present in the Linked list :" + isitpresent);
 
         }
 
@@ -149,6 +152,25 @@ namespace LinkedListProblem
                 Temp = Temp.next;
             }
             Temp.next = Temp.next.next;
+        }
+
+        // Creating Method to search the element in the Linked List
+        public bool Search(int data)
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+            }
+            Node temp = head;
+            while (temp != null)
+            {
+                if (temp.data.Equals(data))
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
         }
 
     }   
