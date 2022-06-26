@@ -13,9 +13,9 @@ namespace LinkedListProblem
 
             //Creating  Linked list by adding Data in the First Position
 
-            program.AddFirst(70);
-            program.AddFirst(30);
-            program.AddFirst(56);
+            program.AddLast(56);
+            program.AddLast(30);
+            program.AddLast(70);
 
             // Delete the first element (index=0) from the linked list
 
