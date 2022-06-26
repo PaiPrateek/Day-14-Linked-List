@@ -11,14 +11,16 @@ namespace LinkedListProblem
 
             Program program = new Program();
 
-            //Creating  Linked list by adding Data in the Last Position
+            //Creating  Linked list by adding Data in the First Position
 
-            program.AddLast(56);
-            program.AddLast(70);
+            program.AddFirst(70);
+            program.AddFirst(30);
+            program.AddFirst(56);
 
-            // insert the 30 in 1st Index (between 56 and 70)
+            // Remove the latest added element from the linked list
+            program.Pop();
 
-            program.Insert(1,30);
+
             program.DiplayData();
 
         }
@@ -113,6 +115,25 @@ namespace LinkedListProblem
                 return false;
             }
 
+        }
+
+        // creating method to remove the latest element from the Linked list
+        public int Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+
+            }
+            Node X = head, Y = head;
+            while (X.next != null)
+            {
+                Y = X;
+                X = X.next;
+            }
+            int Z = X.data;
+            Y.next = null;
+            return Z;
         }
     }   
 }
