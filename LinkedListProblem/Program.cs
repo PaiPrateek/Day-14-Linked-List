@@ -10,10 +10,10 @@ namespace LinkedListProblem
             Console.WriteLine("\n");
 
             Program program = new Program();
-            Console.WriteLine("Creating  Linked list by adding Data in the First Position ");
-            program.AddFirst(70);
-            program.AddFirst(30);
-            program.AddFirst(56);
+            Console.WriteLine("Creating  Linked list by adding Data in the Last Position ");
+            program.AddLast(56);
+            program.AddLast(30);
+            program.AddLast(70);
             program.DiplayData();
 
         }
