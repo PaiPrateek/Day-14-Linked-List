@@ -21,6 +21,9 @@ namespace LinkedListProblem
             // Insert the 40 after 30 (at index=2)  in the linked list
             program.Insert(2, 40);
 
+            // Delete the 40 from the linked list
+            program.Delete(2);
+
             // Dispaying the above created Linked list
             program.DiplayData();
         }
