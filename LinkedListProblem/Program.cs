@@ -17,9 +17,9 @@ namespace LinkedListProblem
             program.AddFirst(30);
             program.AddFirst(56);
 
-            // Remove the latest added element from the linked list
-            program.Pop();
+            // Delete the first element (index=0) from the linked list
 
+            program.Delete(0);
 
             program.DiplayData();
 
@@ -135,5 +135,21 @@ namespace LinkedListProblem
             Y.next = null;
             return Z;
         }
+        // Creating method to Delete the elment from the Linked List
+        public void Delete(int index)
+        {
+            if (index == 0)
+            {
+                head = head.next;
+                return;
+            }
+            Node Temp = head;
+            for (int i = 0; i < index - 1; i++)
+            {
+                Temp = Temp.next;
+            }
+            Temp.next = Temp.next.next;
+        }
+
     }   
 }
