@@ -17,15 +17,12 @@ namespace LinkedListProblem
             program.AddLast(30);
             program.AddLast(70);
 
+
+            // Insert the 40 after 30 (at index=2)  in the linked list
+            program.Insert(2, 40);
+
             // Dispaying the above created Linked list
             program.DiplayData();
-
-
-            //Searching the element 30 in the above created linked list
-            var isitpresent = program.Search(30);
-            Console.WriteLine("\n");
-            Console.WriteLine("Element 30 is Present in the Linked list :" + isitpresent);
-
         }
 
         // Creating Node
