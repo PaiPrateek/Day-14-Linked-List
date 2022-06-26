@@ -11,9 +11,9 @@ namespace LinkedListProblem
 
             Program program = new Program();
             Console.WriteLine("Creating  Linked list by adding Data in the First Position ");
-            program.AddFirst(56);
-            program.AddFirst(30);
             program.AddFirst(70);
+            program.AddFirst(30);
+            program.AddFirst(56);
             program.DiplayData();
 
         }
